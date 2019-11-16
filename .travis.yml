@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+  - "12.4"
+
+script: 'true'
+
+jobs:
+  include:
+    - stage: compile
+      script : npm run lint:lib
+    - script : npm run build:lib
+    - stage: test
+      script :
+        - npm run test:lib
+        - npm run coveralls

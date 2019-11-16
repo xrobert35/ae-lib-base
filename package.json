@@ -3,10 +3,13 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
+    "start": "ng serve asi-esir",
+    "build:lib": "ng build asi-esir-lib && npm run copy:style",
+    "build:lib:watch": "ng build asi-esir-lib --watch",
+    "test:lib": "ng test asi-esir-lib --browsers ChromeHeadless --watch false --code-coverage=true",
+    "lint:lib": "ng lint asi-esir-lib",
+    "copy:style": "./node_modules/.bin/copyfiles -u 4  projects/asi-esir-lib/style/**/* dist/asi-esir-lib/lib/style",
+    "coveralls": "cat ./coverage/asi-esir-lib/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "e2e": "ng e2e"
   },
   "private": true,
@@ -24,13 +27,17 @@
     "zone.js": "~0.9.1"
   },
   "devDependencies": {
+    "@angular-devkit/build-angular": "~0.801.3",
+    "@angular-devkit/build-ng-packagr": "~0.801.3",
     "@angular/cli": "~8.1.0",
     "@angular/compiler-cli": "~8.1.0",
     "@angular/language-service": "~8.1.0",
-    "@types/node": "~8.9.4",
     "@types/jasmine": "~3.3.8",
     "@types/jasminewd2": "~2.0.3",
+    "@types/node": "~8.9.4",
     "codelyzer": "^5.0.0",
+    "copyfiles": "^2.1.1",
+    "coveralls": "^3.0.7",
     "jasmine-core": "~3.4.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~4.1.0",
@@ -38,8 +45,10 @@
     "karma-coverage-istanbul-reporter": "~2.0.1",
     "karma-jasmine": "~2.0.1",
     "karma-jasmine-html-reporter": "^1.4.0",
+    "ng-packagr": "^5.1.0",
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
+    "tsickle": "^0.35.0",
     "tslint": "~5.15.0",
     "typescript": "~3.4.3"
   }

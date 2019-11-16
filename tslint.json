@@ -19,6 +19,11 @@
       true,
       140
     ],
+    "variable-name": {
+      "options" : [
+        "allow-leading-underscore"
+      ]
+    },
     "member-access": false,
     "member-ordering": [
       true,
