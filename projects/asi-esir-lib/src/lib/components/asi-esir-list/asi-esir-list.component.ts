@@ -7,9 +7,9 @@ import { AsiEsirListDataDirective } from './asi-esir-list-item.directive';
 })
 export class AsiEsirListComponent implements OnInit {
 
-  @Input() data : Array<any>;
+  @Input() data: Array<any>;
 
-  @ContentChild(AsiEsirListDataDirective, {static : true}) itemTemplate : AsiEsirListDataDirective;
+  @ContentChild(AsiEsirListDataDirective, {static : true}) itemTemplate: AsiEsirListDataDirective;
 
   constructor() {}
 
