@@ -1,0 +1,3 @@
+<div *ngFor="let item of data" class="ae-list-item">
+  <ng-template [ngTemplateOutlet]="itemTemplate.templateRef" [ngTemplateOutletContext]="{$implicit : item}"></ng-template>
+</div>

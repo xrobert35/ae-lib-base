@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { AsiEsirInputModule } from './components/asi-esir-input/asi-esir-input.module';
 
-const sharedModules = [AsiEsirInputModule];
+const sharedModules = [AsiEsirInputModule, AsiEsirInputModule];
 
 @NgModule({
   declarations: [],

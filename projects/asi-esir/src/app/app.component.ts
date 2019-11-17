@@ -10,4 +10,14 @@ export class AppComponent {
 
   inputModel: string;
   inputModel2: string;
+
+  data = [{
+    title: 'hello',
+    description: 'description for hello'
+  },
+  {
+    title: 'hi',
+    description: 'description for hi'
+  }];
+
 }

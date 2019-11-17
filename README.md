@@ -100,7 +100,7 @@ npm i --save-dev copyfiles
 * update packages.json  (add copy:style and update build:lib)
 
 ```
-"copy:style": "./node_modules/.bin/copyfiles -u 4  projects/asi-esir-lib/style/**/* dist/asi-esir-lib/lib/style",
+"copy:style": "./node_modules/.bin/copyfiles -u 3 projects/asi-esir-lib/style/**/* dist/asi-esir-lib/lib/style",
 "build:lib": "ng build asi-esir-lib && npm run copy:style",
 ```
 

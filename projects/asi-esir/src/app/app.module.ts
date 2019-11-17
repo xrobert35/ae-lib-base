@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { AsiEsirInputModule} from 'asi-esir-lib';
+import { AsiEsirInputModule, AsiEsirListModule} from 'asi-esir-lib';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 
@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AsiEsirInputModule,
+    AsiEsirListModule,
     FormsModule
   ],
   providers: [],

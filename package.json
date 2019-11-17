@@ -8,7 +8,7 @@
     "build:lib:watch": "ng build asi-esir-lib --watch",
     "test:lib": "ng test asi-esir-lib --browsers ChromeHeadless --watch false --code-coverage=true",
     "lint:lib": "ng lint asi-esir-lib",
-    "copy:style": "./node_modules/.bin/copyfiles -u 4  projects/asi-esir-lib/style/**/* dist/asi-esir-lib/lib/style",
+    "copy:style": "./node_modules/.bin/copyfiles -u 3 projects/asi-esir-lib/style/**/* dist/asi-esir-lib/lib/style",
     "coveralls": "cat ./coverage/asi-esir-lib/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "e2e": "ng e2e"
   },
